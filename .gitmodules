@@ -1,0 +1,3 @@
+[submodule "submodules/transformers"]
+	path = submodules/transformers
+	url = https://github.com/huggingface/transformers.git
