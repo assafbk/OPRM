@@ -15,14 +15,14 @@
 We present OPRM (Overflow Prevention for Recurrent Models), a training-free inference method for long-context recurrent LLMs. By mitigating recurrent memory overflows, OPRM ensures reliable inference, leading to significant gains in both synthetic and real-world long-context tasks. In addition, OPRM naturally performs context extension, allowing the model to handle sequences far longer than those it was originally trained on, all while being faster than vanilla inference and requiring a surprisingly small memory footprint.
 <!-- <br><br> -->
 
-<figure align="center">
-      <img src="artifacts/OPRM_longbench.png" width="70%"/> 
+<figure>
       <figcaption>LongBench results of leading recurrent LLMs, with and without ORPM inference.</figcaption>
+      <img src="artifacts/OPRM_longbench.png" width="70%"/> 
 </figure>
 
-<figure align="center">
-      <img src="artifacts/OPRM_ar.png" width="50%"/>  
+<figure>
       <figcaption>Associative Recall results for Falcon-Mamba-Inst-7B, with and without OPRM inference.</figcaption>
+      <img src="artifacts/OPRM_ar.png" width="50%"/>  
 </figure>
 
 In addition, our findings raise questions about whether recurrent models genuinely exploit long-range dependencies across multiple chunks, since our single-chunk strategy delivers stronger performance - even in tasks that presumably require cross-segment relations.
