@@ -16,12 +16,12 @@ We present OPRM (Overflow Prevention for Recurrent Models), a training-free infe
 <!-- <br><br> -->
 
 <figure align="center">
-      <img src="artifacts/OPRM_longbench.png" width="90%"/> 
+      <img src="artifacts/OPRM_longbench.png" width="70%"/> 
       <figcaption>LongBench results of leading recurrent LLMs, with and without ORPM inference.</figcaption>
 </figure>
 
 <figure align="center">
-      <img src="artifacts/OPRM_ar.png" width="70%"/>  
+      <img src="artifacts/OPRM_ar.png" width="50%"/>  
       <figcaption>Associative Recall results for Falcon-Mamba-Inst-7B, with and without OPRM inference.</figcaption>
 </figure>
 
