@@ -83,9 +83,9 @@ dependencies:
       - six==1.17.0
       - sympy==1.13.1
       - tokenizers==0.20.3
-      - torch==2.5.1+cu124
+      - torch==2.5.1
       - tqdm==4.67.1
-      - transformers==4.45.2
+      #- transformers==4.45.2
       - triton==3.1.0
       - typing-extensions==4.12.2
       - tzdata==2025.2
