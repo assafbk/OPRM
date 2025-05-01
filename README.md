@@ -56,6 +56,12 @@ conda env create -f environment.yml
 conda activate oprm
 ```
 
+Install custom Transformers library:
+```
+cd submodules/transformers
+pip install -e .
+```
+
 Install for faster inference with the Falcon-Mamba models:
 ```
 pip install "causal-conv1d>=1.4.0"

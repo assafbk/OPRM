@@ -234,7 +234,7 @@ if __name__ == '__main__':
     max_len_per_seg = 120000 # OPRM: longest sequence length we allow on the gpu (allows parallelization of very long sequences by processing max_len_per_seg/chunk_sizes_to_test chunks at a time)
     if is_oprm:
         chunk_sizes_to_test = [1000, 2000, 3000]
-        assert(all([max_len_per_seg % chunk_sizes_to_test == 0])) # guarantees that no chunks will be sliced
+        assert(all([max_len_per_seg % chunk_size_to_test == 0 for chunk_size_to_test in chunk_sizes_to_test])) # guarantees that no chunks will be sliced
     else:
         chunk_sizes_to_test = [-1] # just for generality
 
