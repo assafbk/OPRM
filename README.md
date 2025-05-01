@@ -43,6 +43,12 @@ git clone https://github.com/assafbk/OPRM.git
 cd OPRM
 ```
 
+Set up custom Transformers library:
+```
+git submodule init
+git submodule update
+```
+
 ## Create Environment
 To set up our environment, please run:
 ```
