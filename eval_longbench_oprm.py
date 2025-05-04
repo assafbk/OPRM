@@ -225,6 +225,7 @@ if __name__ == '__main__':
 
     
     # Additional Configurations
+    cache_dir = './hf_cache'
     out_path_base = f'./results/LongBench/{model_type}/{inference_mode}'
     Path(out_path_base).mkdir(parents=True, exist_ok=True)
 
