@@ -201,7 +201,7 @@ def prepare_input_ids(batch, tokenizer, device, dataset, oprm_config, model_type
 
 
 _datasets = ["hotpotqa", "2wikimqa", "musique", "narrativeqa", "qasper", "multifieldqa_en", \
-             "gov_report", "qmsum", "multi_news", "trec", "nq", "triviaqa", "samsum", "passage_count", \
+             "gov_report", "qmsum", "multi_news", "trec", "triviaqa", "samsum", "passage_count", \
              "passage_retrieval_en", "lcc", "repobench-p"]
 
 _datasets_e = ["hotpotqa", "2wikimqa", "qasper", "multifieldqa_en", "gov_report", "multi_news", "trec", \
