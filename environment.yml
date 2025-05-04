@@ -6,6 +6,7 @@ channels:
 dependencies:
   - pip=25.0=py310h06a4308_0
   - python=3.10.16=he870216_1
+  - setuptools=75.8.0=py310h06a4308_0
   - pip:
       - accelerate==1.6.0
       - aiohappyeyeballs==2.6.1
@@ -52,7 +53,6 @@ dependencies:
       - tokenizers==0.20.3
       - torch==2.5.1
       - tqdm==4.67.1
-      #- transformers==4.45.2
       - triton==3.1.0
       - typing-extensions==4.12.2
       - tzdata==2025.2

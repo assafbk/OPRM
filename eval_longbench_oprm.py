@@ -172,8 +172,6 @@ def prepare_input_ids(batch, tokenizer, device, dataset, oprm_config, model_type
         pre_context_query = tokenizer.encode('Please complete the code given below. \n')
         if model_type == 'falcon3_mamba':
             query = tokenizer.encode('Now complete the next line of code. Only give me the answer and do not output any other words:\n')
-        elif model_type == 'falcon_mamba':
-            query = tokenizer.encode('Next line of code:\n')
         else:
             query = tokenizer.encode('Next line of code:\n')
     
@@ -181,8 +179,6 @@ def prepare_input_ids(batch, tokenizer, device, dataset, oprm_config, model_type
         pre_context_query = tokenizer.encode('Please complete the code given below. \n')
         if model_type == 'falcon3_mamba':
             query = tokenizer.encode(batch['query'] + 'Now complete the next line of code. Only give me the answer and do not output any other words:\n')
-        elif model_type == 'falcon_mamba':
-            query = tokenizer.encode(batch['query'] + 'Next line of code:\n')
         else:
             query = tokenizer.encode(batch['query'] + 'Next line of code:\n')
 
@@ -227,7 +223,8 @@ if __name__ == '__main__':
     inference_mode = 'oprm' if is_oprm else 'vanilla'
     e = args.e == 1
 
-    cache_dir = './hf_cache'
+    
+    # Additional Configurations
     out_path_base = f'./results/LongBench/{model_type}/{inference_mode}'
     Path(out_path_base).mkdir(parents=True, exist_ok=True)
 
@@ -244,6 +241,8 @@ if __name__ == '__main__':
                      "gov_report": 500, "qmsum": 250, "multi_news": 250, "trec": 20, "triviaqa": 20, \
                      "samsum": 250, "passage_count": 20, "passage_retrieval_en": 20, "lcc": 40, "repobench-p": 40}
 
+    
+    # Run LongBench
     model, tokenizer = load_model(device, model_type, cache_dir)
     for dataset_name in datasets_to_test:
         
