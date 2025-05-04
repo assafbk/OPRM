@@ -32,7 +32,7 @@ In addition, our findings raise questions about whether recurrent models genuine
 <br>
 
 # Release Updates
-* [3/4/2025] Code published!
+* [6/5/2025] Code published!
 
 <br>
 
@@ -85,18 +85,16 @@ Arguments:
 * \<model_type> - str, currently supported models: 'falcon_mamba', 'falcon3_mamba', 'recurrent_gemma', 'rwkv'
 * \<e> - int, 0 for LongBench, 1 for LongBench_e
 * \<is_oprm> - int, 0 for vanilla inference, 1 for OPRM
-
 <br>
 
-## Additional Configurations:
-* \<max_len_per_seg> - TODO
-* \<chunk_sizes_to_test> - TODO
+## Additional Configurations (L228-243):
+* \<cache_dir> - str, HuggingFace cache dir
+* \<out_path_base> - str, base path for model predictions
+* \<max_len_per_seg> - int, max amount of tokens allowed in a batch. useful for very long sequences, when not all context chunks fit in a single batch.
+* \<chunk_sizes_to_test> - list, chunk sizes to test (L in the paper).
+* \<datasets_to_test> - list, datasets to evaluate. select a subset of: ["hotpotqa", "2wikimqa", "musique", "narrativeqa", "qasper", "multifieldqa_en", "gov_report", "qmsum", "multi_news", "trec", "triviaqa", "samsum", "passage_count" "passage_retrieval_en", "lcc", "repobench-p"]
+* \<dataset_ntoks> - dict, maps between dataset and max amount of tokens allowed to predict per query.
 <br>
-
-
-
-## Notes and Tips:
-* TODO
 <br>
 
 
