@@ -5,7 +5,7 @@
 <a href="https://assafbk.github.io/website/">Assaf Ben-Kish</a>,
 <a href="https://itamarzimm.github.io/">Itamar Zimerman</a>,
 <a href="https://jmiemirza.github.io/">M. Jehanzeb Mirza</a>,
-<a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>,
+<!-- <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>, -->
 <a href="https://scholar.google.com/citations?user=pfGI-KcAAAAJ&hl=en">James Glass</a>,
 <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en">Leonid Karlinsky</a>,
 <a href="https://www.giryes.sites.tau.ac.il/">Raja Giryes</a>
@@ -16,12 +16,12 @@ We present OPRM (Overflow Prevention for Recurrent Models), a training-free infe
 <!-- <br><br> -->
 
 <figure>
-      <figcaption>LongBench results of leading recurrent LLMs, with and without ORPM inference.</figcaption>
+      <figcaption>LongBench results of leading recurrent LLMs, with and without ORPM inference:</figcaption>
       <img src="artifacts/OPRM_longbench.png" width="70%"/> 
 </figure>
 
 <figure>
-      <figcaption>Associative Recall results for Falcon-Mamba-Inst-7B, with and without OPRM inference.</figcaption>
+      <figcaption>Associative Recall results for Falcon-Mamba-Inst-7B, with and without OPRM inference:</figcaption>
       <img src="artifacts/OPRM_ar.png" width="50%"/>  
 </figure>
 
@@ -32,7 +32,7 @@ In addition, our findings raise questions about whether recurrent models genuine
 <br>
 
 # Release Updates
-* [6/5/2025] Code published!
+* [8/5/2025] Code published!
 
 <br>
 
@@ -87,7 +87,7 @@ Arguments:
 * \<is_oprm> - int, 0 for vanilla inference, 1 for OPRM
 <br>
 
-## Additional Configurations (L228-243):
+## Additional Configurations ([link](https://github.com/assafbk/OPRM/blob/main/eval_longbench_oprm.py#L228)):
 * \<cache_dir> - str, HuggingFace cache dir
 * \<out_path_base> - str, base path for model predictions
 * \<max_len_per_seg> - int, max amount of tokens allowed in a batch. useful for very long sequences, when not all context chunks fit in a single batch.
@@ -96,6 +96,10 @@ Arguments:
 * \<dataset_ntoks> - dict, maps between dataset and max amount of tokens allowed to predict per query.
 <br>
 <br>
+
+
+# Acknowledgments
+This work was possible thanks to the [Mamba](https://github.com/state-spaces/mamba), [LongBench](https://github.com/THUDM/LongBench), and [Transformers](https://github.com/huggingface/transformers) libraries. We would like to thank them for their great work! 
 
 
 # Citation
