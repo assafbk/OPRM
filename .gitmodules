@@ -1,3 +1,6 @@
 [submodule "submodules/transformers"]
 	path = submodules/transformers
 	url = https://github.com/assafbk/transformers_oprm.git
+[submodule "submodules/LongBench"]
+	path = submodules/LongBench
+	url = https://github.com/THUDM/LongBench.git

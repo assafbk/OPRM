@@ -267,14 +267,14 @@ if __name__ == '__main__':
 
             if inference_mode == 'oprm':
                 if e:
-                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_cs_{oprm_config["chunk_size"]}_type_e.json'
+                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_cs_{oprm_config["chunk_size"]}_type_e.jsonl'
                 else:
-                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_cs_{oprm_config["chunk_size"]}.json'
+                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_cs_{oprm_config["chunk_size"]}.jsonl'
             else:
                 if e:
-                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_type_e.json'
+                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks_type_e.jsonl'
                 else:
-                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks.json'
+                    out_path = f'{out_path_base}/{dataset_name}.{start_datetime_str}_{inference_mode}_{max_gen_len}_toks.jsonl'
 
             dataloader = DataLoader(data['test'], collate_fn=collate_fn, batch_size=1, shuffle=False, num_workers=0)
             for idx, batch in enumerate(tqdm(dataloader)):           

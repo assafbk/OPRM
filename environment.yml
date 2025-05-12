@@ -60,3 +60,6 @@ dependencies:
       - wcwidth==0.2.13
       - xxhash==3.5.0
       - yarl==1.18.3
+      - jieba==0.42.1
+      - rouge==1.0.1
+      - fuzzywuzzy==0.18.0
