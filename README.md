@@ -9,7 +9,7 @@
 <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en">Leonid Karlinsky</a>,
 <a href="https://www.giryes.sites.tau.ac.il/">Raja Giryes</a>
 
-<a href=""><img src="https://img.shields.io/badge/arXiv-2505.07793-b31b1b.svg"></a>
+<a href="https://arxiv.org/abs/2505.07793"><img src="https://img.shields.io/badge/arXiv-2505.07793-b31b1b.svg"></a>
 
 We present OPRM (Overflow Prevention for Recurrent Models), a training-free inference method for long-context recurrent LLMs. By mitigating recurrent memory overflows, OPRM ensures reliable inference, leading to significant gains in both synthetic and real-world long-context tasks. In addition, OPRM naturally performs context extension, allowing the model to handle sequences far longer than those it was originally trained on, all while being faster than vanilla inference and requiring a surprisingly small memory footprint.
 <!-- <br><br> -->
