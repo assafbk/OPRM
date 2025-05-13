@@ -9,7 +9,7 @@
 <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en">Leonid Karlinsky</a>,
 <a href="https://www.giryes.sites.tau.ac.il/">Raja Giryes</a>
 
-<a href=""><img src="https://img.shields.io/badge/arXiv-2311.13608-b31b1b.svg"></a> TODO add arxiv link
+<a href=""><img src="https://img.shields.io/badge/arXiv-2505.07793-b31b1b.svg"></a>
 
 We present OPRM (Overflow Prevention for Recurrent Models), a training-free inference method for long-context recurrent LLMs. By mitigating recurrent memory overflows, OPRM ensures reliable inference, leading to significant gains in both synthetic and real-world long-context tasks. In addition, OPRM naturally performs context extension, allowing the model to handle sequences far longer than those it was originally trained on, all while being faster than vanilla inference and requiring a surprisingly small memory footprint.
 <!-- <br><br> -->
@@ -71,7 +71,6 @@ Install for faster inference with the RWKV model:
 ```
 pip install --no-deps git+https://github.com/sustcsonglin/flash-linear-attention
 ```
-
 <br>
 
 # Evaluate OPRM on LongBench
@@ -85,7 +84,7 @@ Arguments:
 * \<e> - int, 0 for LongBench, 1 for LongBench_e
 * \<is_oprm> - int, 0 for vanilla inference, 1 for OPRM
 <br>
-<br>
+
 
 Additional Configurations (change in code, [here](https://github.com/assafbk/OPRM/blob/main/eval_longbench_oprm.py#L228)):
 * \<cache_dir> - str, HuggingFace cache dir
@@ -94,7 +93,6 @@ Additional Configurations (change in code, [here](https://github.com/assafbk/OPR
 * \<chunk_sizes_to_test> - list, chunk sizes to test (L in the paper).
 * \<datasets_to_test> - list, datasets to evaluate. select a subset of: ["hotpotqa", "2wikimqa", "musique", "narrativeqa", "qasper", "multifieldqa_en", "gov_report", "qmsum", "multi_news", "trec", "triviaqa", "samsum", "passage_count" "passage_retrieval_en", "lcc", "repobench-p"]
 * \<dataset_ntoks> - dict, maps between dataset and max amount of tokens allowed to predict per query.
-<br>
 <br>
 
 ## Evaluate Predictions
@@ -126,13 +124,13 @@ This work was possible thanks to the [Mamba](https://github.com/state-spaces/mam
 # Citation
 If you find this work useful, please cite the following:
 ```bibtex
-@misc{TODO,
-      title={}, 
-      author={},
-      year={},
-      eprint={},
-      archivePrefix={},
-      primaryClass={},
-      url={}, 
+@misc{benkish2025overflowpreventionenhanceslongcontext,
+      title={Overflow Prevention Enhances Long-Context Recurrent LLMs}, 
+      author={Assaf Ben-Kish and Itamar Zimerman and M. Jehanzeb Mirza and James Glass and Leonid Karlinsky and Raja Giryes},
+      year={2025},
+      eprint={2505.07793},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.07793}, 
 }
 ```
