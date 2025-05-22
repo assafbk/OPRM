@@ -1,4 +1,4 @@
-# Overflow Prevention Enhances Long-Context Recurrent Models
+# Overflow Prevention Enhances Long-Context Recurrent LLMs
 
 <p align="center">
 
